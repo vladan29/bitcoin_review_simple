@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.MainActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLine13"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLine14"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCryptoHeader"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/cryptocurrency"
+            app:layout_constraintEnd_toStartOf="@id/guideLine13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPriceHeader"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="start|center_vertical"
+            android:text="@string/price"
+            app:layout_constraintEnd_toStartOf="@id/guideLine14"
+            app:layout_constraintStart_toEndOf="@id/guideLine13"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv24HHeader"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="start|center_vertical"
+            android:text="@string/_24h"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideLine14"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCoins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvCryptoHeader" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
