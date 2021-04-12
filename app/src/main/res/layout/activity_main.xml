@@ -51,7 +51,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv24HHeader"
             android:layout_width="0dp"
@@ -69,6 +68,10 @@
             android:id="@+id/rvCoins"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="?attr/actionBarSize"
+            android:scrollbars="vertical"
             app:layout_constraintTop_toBottomOf="@id/tvCryptoHeader" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
