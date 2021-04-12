@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine21"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine22"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine23"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine24"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/indicator_text_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideLine21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/indicator_image_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideLine22"
+        app:layout_constraintStart_toEndOf="@id/guideLine21"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/llCryptoIndicator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideLine23"
+        app:layout_constraintStart_toEndOf="@id/guideLine22"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/indicator_text_background"
+            android:fontFamily="@font/rubik_regular"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSymbol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/indicator_text_background"
+            android:fontFamily="@font/rubik_regular"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPriceIndicator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideLine24"
+        app:layout_constraintStart_toEndOf="@id/guideLine23"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/indicator_text_background"
+            android:fontFamily="@font/rubik_regular"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBtcPriceIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/indicator_text_background"
+            android:fontFamily="@font/rubik_regular"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll24HIndicator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideLine24"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvChangeIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@drawable/indicator_text_background"
+            android:fontFamily="@font/rubik_regular"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"/>
+
+        <com.robinhood.spark.SparkView
+            android:id="@+id/svChartIndicator"
+            android:background="@drawable/indicator_text_background"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

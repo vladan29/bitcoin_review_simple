@@ -19,12 +19,13 @@ import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYouListener;
 import com.google.gson.annotations.SerializedName;
 import com.robinhood.spark.SparkView;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import lombok.Data;
 
-import static java.lang.Math.round;
 
 @Data
 public class CoinModel {
@@ -72,7 +73,7 @@ public class CoinModel {
     }
 
     @BindingAdapter("loadIcon")
-    public static void loadIcon(ImageView imageView, String link) {
+    public static void loadIcon(@NotNull ImageView imageView, String link) {
         RequestBuilder<PictureDrawable> requestBuilder = GlideToVectorYou
                 .init()
                 .with(imageView.getContext())
@@ -153,18 +154,3 @@ public class CoinModel {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
