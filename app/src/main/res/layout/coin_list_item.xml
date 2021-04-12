@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.05" />
+            app:layout_constraintGuide_percent="0.07" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideLine2"
@@ -76,12 +76,18 @@
                 android:id="@+id/tvName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
                 android:text="@{coinListItem.name}" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvSymbol"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
                 android:text="@{coinListItem.symbol}" />
         </LinearLayout>
 
@@ -99,12 +105,18 @@
                 android:id="@+id/tvPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
                 app:setPrice="@{coinListItem.price}" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvBtcPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
                 app:setBtcPrice="@{coinListItem.btcPrice}" />
         </LinearLayout>
 
@@ -122,6 +134,9 @@
                 android:id="@+id/tvChange"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
                 app:showChange="@{coinListItem.change}" />
 
             <com.robinhood.spark.SparkView
