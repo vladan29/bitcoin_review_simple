@@ -10,9 +10,10 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.vladan.bitcoinreviewsimple.BR;
-import com.vladan.bitcoinreviewsimple.viewmodels.CoinViewModel;
 import com.vladan.bitcoinreviewsimple.R;
 import com.vladan.bitcoinreviewsimple.databinding.CoinListItemBinding;
+import com.vladan.bitcoinreviewsimple.viewmodels.CoinViewModel;
+
 import com.vladan.bitcoinreviewsimple.models.CoinModel;
 
 import java.util.ArrayList;

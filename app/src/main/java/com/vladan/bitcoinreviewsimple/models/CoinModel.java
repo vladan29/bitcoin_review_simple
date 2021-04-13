@@ -12,12 +12,12 @@ import androidx.databinding.BindingAdapter;
 import com.bumptech.glide.RequestBuilder;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
+import com.vladan.bitcoinreviewsimple.R;
 import com.vladan.bitcoinreviewsimple.utils.AdapterSpark;
 import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYou;
 import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYouListener;
 import com.google.gson.annotations.SerializedName;
 import com.robinhood.spark.SparkView;
-import com.vladan.udimitest.R;
 
 import org.jetbrains.annotations.NotNull;
 
