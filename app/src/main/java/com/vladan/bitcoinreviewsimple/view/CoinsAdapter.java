@@ -1,4 +1,4 @@
-package com.example.udimitest.view;
+package com.vladan.bitcoinreviewsimple.view;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -9,11 +9,11 @@ import androidx.databinding.ViewDataBinding;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.udimitest.BR;
-import com.example.udimitest.viewmodels.CoinViewModel;
-import com.example.udimitest.R;
-import com.example.udimitest.databinding.CoinListItemBinding;
-import com.example.udimitest.models.CoinModel;
+import com.vladan.bitcoinreviewsimple.BR;
+import com.vladan.bitcoinreviewsimple.viewmodels.CoinViewModel;
+import com.vladan.bitcoinreviewsimple.R;
+import com.vladan.bitcoinreviewsimple.databinding.CoinListItemBinding;
+import com.vladan.bitcoinreviewsimple.models.CoinModel;
 
 import java.util.ArrayList;
 import java.util.List;

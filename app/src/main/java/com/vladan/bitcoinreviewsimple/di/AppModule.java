@@ -1,6 +1,6 @@
-package com.example.udimitest.di;
+package com.vladan.bitcoinreviewsimple.di;
 
-import com.example.udimitest.api.ApiService;
+import com.vladan.bitcoinreviewsimple.api.ApiService;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

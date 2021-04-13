@@ -1,4 +1,4 @@
-package com.example.udimitest.models;
+package com.vladan.bitcoinreviewsimple.models;
 
 import com.google.gson.annotations.SerializedName;
 

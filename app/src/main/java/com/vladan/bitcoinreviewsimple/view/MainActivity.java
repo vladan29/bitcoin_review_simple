@@ -1,4 +1,4 @@
-package com.example.udimitest.view;
+package com.vladan.bitcoinreviewsimple.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
@@ -11,9 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.udimitest.viewmodels.CoinViewModel;
-import com.example.udimitest.R;
-import com.example.udimitest.databinding.ActivityMainBinding;
+import com.vladan.bitcoinreviewsimple.viewmodels.CoinViewModel;
+import com.vladan.bitcoinreviewsimple.R;
+import com.vladan.bitcoinreviewsimple.databinding.ActivityMainBinding;
 import com.facebook.shimmer.ShimmerFrameLayout;
 
 import dagger.hilt.android.AndroidEntryPoint;

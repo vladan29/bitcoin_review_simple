@@ -1,11 +1,11 @@
-package com.example.udimitest.viewmodels;
+package com.vladan.bitcoinreviewsimple.viewmodels;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModel;
 
-import com.example.udimitest.models.CoinModel;
-import com.example.udimitest.repositories.CoinRepository;
+import com.vladan.bitcoinreviewsimple.models.CoinModel;
+import com.vladan.bitcoinreviewsimple.repositories.CoinRepository;
 
 import java.util.ArrayList;
 

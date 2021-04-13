@@ -1,4 +1,4 @@
-package com.example.udimitest.utils;
+package com.vladan.bitcoinreviewsimple.utils;
 
 import com.robinhood.spark.SparkAdapter;
 

@@ -6,7 +6,7 @@
 
         <variable
             name="coinListItem"
-            type="com.example.udimitest.models.CoinModel" />
+            type="com.vladan.bitcoinreviewsimple.models.CoinModel" />
 
     </data>
 

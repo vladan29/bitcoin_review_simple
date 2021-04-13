@@ -1,6 +1,6 @@
-package com.example.udimitest.api;
+package com.vladan.bitcoinreviewsimple.api;
 
-import com.example.udimitest.models.ResponseModel;
+import com.vladan.bitcoinreviewsimple.models.ResponseModel;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

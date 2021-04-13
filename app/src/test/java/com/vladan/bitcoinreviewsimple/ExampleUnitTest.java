@@ -1,4 +1,4 @@
-package com.example.udimitest;
+package com.vladan.bitcoinreviewsimple;
 
 import org.junit.Test;
 

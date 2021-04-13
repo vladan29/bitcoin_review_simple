@@ -1,12 +1,12 @@
-package com.example.udimitest.repositories;
+package com.vladan.bitcoinreviewsimple.repositories;
 
 import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.udimitest.api.ApiService;
-import com.example.udimitest.models.CoinModel;
-import com.example.udimitest.models.ResponseModel;
+import com.vladan.bitcoinreviewsimple.api.ApiService;
+import com.vladan.bitcoinreviewsimple.models.CoinModel;
+import com.vladan.bitcoinreviewsimple.models.ResponseModel;
 
 import org.jetbrains.annotations.NotNull;
 

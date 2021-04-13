@@ -1,4 +1,4 @@
-package com.example.udimitest;
+package com.vladan.bitcoinreviewsimple;
 
 import android.content.Context;
 
