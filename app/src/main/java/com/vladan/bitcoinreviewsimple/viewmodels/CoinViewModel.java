@@ -26,7 +26,6 @@ public class CoinViewModel extends ViewModel {
             CoinRepository repository) {
         this.savedStateHandle = savedStateHandle;
         this.repository = repository;
-        //this.coins = repository.fetchCoins("marketCap");
     }
 
     public void init() {

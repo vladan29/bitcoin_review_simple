@@ -12,6 +12,7 @@ import androidx.databinding.BindingAdapter;
 import com.bumptech.glide.RequestBuilder;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
+import com.squareup.picasso.Picasso;
 import com.vladan.bitcoinreviewsimple.R;
 import com.vladan.bitcoinreviewsimple.utils.AdapterSpark;
 import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYou;
@@ -74,29 +75,38 @@ public class CoinModel {
 
     @BindingAdapter("loadIcon")
     public static void loadIcon(@NotNull ImageView imageView, String link) {
-        RequestBuilder<PictureDrawable> requestBuilder = GlideToVectorYou
-                .init()
-                .with(imageView.getContext())
-                .setPlaceHolder(R.drawable.ic_bitcoin_placeholder_svgrepo_com, R.drawable.ic_baseline_error_outline_24)
-                .withListener(new GlideToVectorYouListener() {
-                    @Override
-                    public void onLoadFailed() {
-                        Log.d(TAG, "onLoadFailed");
-                    }
+        String format = link.substring(link.length() - 3);
+        if (format.equals("png") || format.equals("jpg")) {
+            Picasso.get()
+                    .load(link)
+                    .fit()
+                    .centerInside()
+                    .into(imageView);
+        } else {
+            RequestBuilder<PictureDrawable> requestBuilder = GlideToVectorYou
+                    .init()
+                    .with(imageView.getContext())
+                    .setPlaceHolder(R.drawable.ic_bitcoin_placeholder_svgrepo_com, R.drawable.ic_baseline_error_outline_24)
+                    .withListener(new GlideToVectorYouListener() {
+                        @Override
+                        public void onLoadFailed() {
+                            Log.d(TAG, "onLoadFailed");
+                        }
 
-                    @Override
-                    public void onResourceReady() {
-                        Log.d(TAG, "onResourceReady");
-                    }
-                })
-                .getRequestBuilder();
-        requestBuilder
-                .override(30, 30)
-                .load(link)
-                .transition(DrawableTransitionOptions.withCrossFade())
-                .apply(new RequestOptions()
-                        .centerInside())
-                .into(imageView);
+                        @Override
+                        public void onResourceReady() {
+                            Log.d(TAG, "onResourceReady");
+                        }
+                    })
+                    .getRequestBuilder();
+            requestBuilder
+                    //.override(50, 50)
+                    .load(link)
+                    .transition(DrawableTransitionOptions.withCrossFade())
+                    .apply(new RequestOptions()
+                            .fitCenter())
+                    .into(imageView);
+        }
 
 
     }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "858846487403",
+    "project_id": "bitcoinreviewsimple",
+    "storage_bucket": "bitcoinreviewsimple.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858846487403:android:398a36b5c2cebab76ba22e",
+        "android_client_info": {
+          "package_name": "com.vladan.bitcoinreviewsimple"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "858846487403-jp6bmpnlhov01mt7ntee6b7ptrsk3uq4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi7WkjP2_JYfA673JvEfFBEUJA2FV8Gng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "858846487403-jp6bmpnlhov01mt7ntee6b7ptrsk3uq4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
