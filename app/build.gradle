@@ -84,4 +84,6 @@ dependencies {
     //Shimmer
     implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
 
+    implementation 'com.github.vladan29:internet_checker:1.0.3'
+
 }

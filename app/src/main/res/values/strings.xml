@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Udimi Test</string>
+    <string name="app_name">BitcoinReviewSimple</string>
     <string name="cryptocurrency">CRYPTOCURRENCY</string>
     <string name="price">PRICE</string>
     <string name="_24h">24H</string>

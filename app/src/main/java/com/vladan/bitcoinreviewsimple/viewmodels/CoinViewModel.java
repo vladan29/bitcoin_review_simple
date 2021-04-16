@@ -18,7 +18,7 @@ public class CoinViewModel extends ViewModel {
 
     private final CoinRepository repository;
     private final SavedStateHandle savedStateHandle;
-    public MutableLiveData<ArrayList<CoinModel>> coins;
+    public MutableLiveData<ArrayList<CoinModel>> coins = new MutableLiveData<>();
 
     @Inject
     CoinViewModel(
@@ -26,6 +26,7 @@ public class CoinViewModel extends ViewModel {
             CoinRepository repository) {
         this.savedStateHandle = savedStateHandle;
         this.repository = repository;
+        //this.coins = repository.fetchCoins("marketCap");
     }
 
     public void init() {
