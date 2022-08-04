@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 case R.id.tv24HHeader: {
                     coinViewModel.sortBy24hChange();
                     coinsAdapter.observeList();
-                    logAnalyticsEvent("24H_clicked", coinsAdapter.getFirstName());
+                    logAnalyticsEvent("h_clicked", coinsAdapter.getFirstName());
                     break;
                 }
 
