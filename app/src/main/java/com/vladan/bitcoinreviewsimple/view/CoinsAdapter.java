@@ -74,4 +74,12 @@ public class CoinsAdapter extends RecyclerView.Adapter<CoinsAdapter.CoinViewHold
         });
 
     }
+
+    public String getFirstPrice(){
+        return mCoinModelList.get(0).getPrice();
+    }
+
+    public String getFirstName(){
+        return mCoinModelList.get(0).getName();
+    }
 }

@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.vladan.bitcoinreviewsimple.AppApplication;
 import com.vladan.bitcoinreviewsimple.viewmodels.CoinViewModel;
 import com.vladan.bitcoinreviewsimple.R;
 import com.vladan.bitcoinreviewsimple.databinding.ActivityMainBinding;
@@ -22,6 +23,7 @@ import com.facebook.shimmer.ShimmerFrameLayout;
 import com.vladan.networkchecker.NetworkLiveData;
 
 import dagger.hilt.android.AndroidEntryPoint;
+import dagger.hilt.android.qualifiers.ApplicationContext;
 
 @AndroidEntryPoint
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -88,17 +90,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 case R.id.tvCryptoHeader: {
                     coinViewModel.init();
                     coinsAdapter.observeList();
+                    logAnalyticsEvent("crypto_clicked", coinsAdapter.getFirstName());
                     break;
                 }
                 case R.id.tvPriceHeader: {
                     coinViewModel.sortByPrice();
                     coinsAdapter.observeList();
+                    logAnalyticsEvent("price_clicked", coinsAdapter.getFirstName());
                     break;
                 }
 
                 case R.id.tv24HHeader: {
                     coinViewModel.sortBy24hChange();
                     coinsAdapter.observeList();
+                    logAnalyticsEvent("24H_clicked", coinsAdapter.getFirstName());
                     break;
                 }
 
@@ -114,5 +119,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             shimmerFrameLayout.stopShimmerAnimation();
             shimmerFrameLayout.setVisibility(View.GONE);
         });
+    }
+
+    private void logAnalyticsEvent( String eventName, String label){
+        Bundle params = new Bundle();
+        params.putString("name", label);
+        params.putString("price", coinsAdapter.getFirstPrice());
+        ((AppApplication) getApplication()).getFirebaseAnalytics().logEvent(eventName, params);
     }
 }

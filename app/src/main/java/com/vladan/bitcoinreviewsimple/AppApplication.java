@@ -10,7 +10,7 @@ import dagger.hilt.android.HiltAndroidApp;
 @HiltAndroidApp
 public class AppApplication extends Application {
     InternetManager internetManager;
-    FirebaseAnalytics firebaseAnalytics;
+    private FirebaseAnalytics firebaseAnalytics;
 
     @Override
     public void onCreate() {
@@ -19,5 +19,9 @@ public class AppApplication extends Application {
         internetManager = InternetManager.getInternetManager(this);
         internetManager.registerInternetMonitor();
 
+    }
+
+    public  FirebaseAnalytics getFirebaseAnalytics() {
+        return firebaseAnalytics;
     }
 }

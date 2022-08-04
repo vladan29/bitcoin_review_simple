@@ -30,7 +30,7 @@ import lombok.Data;
 
 @Data
 public class CoinModel {
-    private static String TAG = "CoinModel";
+    private static final String TAG = "CoinModel";
 
     public CoinModel() {
     }
@@ -71,6 +71,14 @@ public class CoinModel {
     public ArrayList<String> getSparkLine() {
         sparkLine.add(change);
         return sparkLine;
+    }
+
+    public String getPrice(){
+        return price;
+    }
+
+    public String getName(){
+        return name;
     }
 
     @BindingAdapter("loadIcon")
